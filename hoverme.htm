@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        /* TASK1 */
+        .hover-button {
+            background: linear-gradient(to right , #2980b9 50%,  #3498db 50%);
+            background-size: 200% 100%;
+            border: none;
+            background-position: 100% 0;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-position .3s;
+            margin: 50px 20px;
+        }
+        .hover-button:hover {
+            background-position: 0 0;
+        }
+        /* TASK2 */
+        .red{
+            width: 100%;
+            background-color: red;
+            height: 50px;
+        }
+        .green{
+            width: 100%;
+            height: 50px;
+            background-color: #65a182;
+        }
+        .box-2{
+            width: 100%;
+            height: 500px;
+            background-color: #3d3d3d;
+            color: white;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-2 > div{
+            width:500px;
+            height: 80px;
+            font-size: 20px;
+        }
+        .btn-two {
+            color: #fff;
+            transition: all 0.5s;
+            position: relative; 
+        }
+        .btn-two span {
+            z-index: 2; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%; 
+            }
+        .btn-two::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.5s;
+            border: 1px solid rgba(255,255,255,0.2);
+            background-color: rgba(255,255,255,0.1);
+            }
+        .btn-two::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.5s;
+            border: 1px solid #ffffff33;
+            background-color: #ffffff1a;
+            }
+        .btn-two:hover::before {
+            transform: rotate(-45deg);
+            background-color: #ffffff00;
+            }
+        .btn-two:hover::after {
+            transform: rotate(45deg);
+            background-color: rgba(255,255,255,0);
+            }
+
+
+            /* TASK3 */
+        
+        .basket{
+            display: inline-flex;
+            margin: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: #24bb42;
+            border: none;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .basket i{
+            font-size: 20px;
+        }
+        .basket span{
+            display: none;
+        }
+        .basket:hover{
+            width: 200px;
+            background: linear-gradient(to right, #208132, #208132);
+            transition: width .3s ease;
+        }
+        .basket:hover span{
+            display: inline-block;
+            font-size: 16px;
+            padding-left: 10px;   
+        }
+    
+    </style>
+</head>
+
+<body>
+
+    <!-- TASK1 -->
+    <button class="hover-button">HOVER ME</button>
+
+    <!-- TASK2 -->
+    <div class="red"></div>
+    <div class="box-2">
+        <div class="btn-two">
+          <span>HOVER ME</span>
+        </div>
+      </div>
+    <div class="green"></div>
+    
+    <!-- TASK3 -->
+        <button class="basket">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span>Add to basket</span>
+        </button>
+</body>
+
+</html>
